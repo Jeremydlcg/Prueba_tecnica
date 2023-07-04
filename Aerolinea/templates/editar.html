@@ -1,0 +1,37 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Editar Aviones</title>
+</head>
+
+<body>
+
+    <h1>Editar Aviones</h1>
+    <form method='POST'>
+        {{forma.csrf_token}}
+        <p>
+            {{forma.name.label}} <br/>
+            {{forma.name(size=30)}}
+        </p>
+        <p>
+            {{forma.airportentry.label}} <br/>
+            {{forma.airportentry(size=30)}}
+        </p>
+        <p>
+            {{forma.departureairport.label}} <br/>
+            {{forma.departureairport(size=30)}}
+        </p>
+        <p>
+            {{forma.status.label}} <br/>
+            {{forma.status(size=30)}}
+        </p>
+        <p>
+            {{forma.enviar()}}
+        </p>
+    </form>
+
+
+
+</body>
+</html>

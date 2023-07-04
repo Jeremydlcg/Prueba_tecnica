@@ -1,0 +1,7 @@
+flask
+flask_cors
+requests
+psycopg2
+flask-sqlalchemy
+flask_migrate
+flask-wtf

@@ -1,0 +1,48 @@
+<!Doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Listado de Aviones</title>
+</head>
+<body>
+
+    <h1>Listado de Aviones</h1>
+    <div>
+        Total de aviones: {{total_aviones}}
+    </div>
+    <div>
+        <a href="/agregar">Agregar Avion</a>
+    </div>
+    <div>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Airopuerto de Despegue</th>
+                    <th>Airopuerto de salida</th>
+                    <th>Status</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for avion in aviones %}
+                <tr>
+                    <td>{{avion.id}}</td>
+                    <td>{{avion.name}}</td>
+                    <td>{{avion.airportentry}}</td>
+                    <td>{{avion.departureairport}}</td>
+                    <td>{{avion.status}}</td>
+                    <td><a href="ver/{{avion.id}}">Ver</a></td>
+                    <td><a href="editar/{{avion.id}}">Editar</a></td>
+                    <td><a href="eliminar/{{avion.id}}">Eliminar</a></td>
+                </tr>
+                <%{% endfor %}%>
+            </tbody>
+        </table>
+    </div>
+
+
+</body>
+</html>
